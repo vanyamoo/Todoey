@@ -8,7 +8,10 @@
 
 import Foundation
 
-struct Item {
+
+// Encodable encodes model objects into a plist, JSON
+// Encodable + Decodable = Codable
+struct Item: Codable {
     var title: String = ""
     var done: Bool = false
 }
