@@ -11,6 +11,7 @@ import RealmSwift
 
 class Categorie: Object {
     @objc dynamic var name: String = ""
+    @objc dynamic var hexColor: String?
     let items = List<Item>()
 }
 

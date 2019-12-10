@@ -23,7 +23,7 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDoItemCell" textLabel="5Kf-lB-RkQ" style="IBUITableViewCellStyleDefault" id="nMh-IW-Vsg">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="5Kf-lB-RkQ" style="IBUITableViewCellStyleDefault" id="nMh-IW-Vsg" customClass="SwipeTableViewCell" customModule="SwipeCellKit">
                                 <rect key="frame" x="0.0" y="72" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nMh-IW-Vsg" id="MxY-Ab-GkS">
@@ -49,7 +49,6 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Items" id="CU8-0U-ggq">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="75g-Qo-u0w">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="addButtonPressed:" destination="aB1-Ic-8Vw" id="Bev-9P-6r5"/>
                             </connections>
@@ -57,6 +56,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="2FW-3a-CgA" id="yrt-L1-s5t"/>
+                        <outlet property="serachBar" destination="2FW-3a-CgA" id="dR4-Qm-c1v"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lCt-az-PMb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -68,8 +68,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ptY-J0-ejO" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MP2-Zo-oaO">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="MP2-Zo-oaO">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
@@ -94,7 +94,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" textLabel="JC8-Jp-wlj" style="IBUITableViewCellStyleDefault" id="1Yh-dw-gGt">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="JC8-Jp-wlj" style="IBUITableViewCellStyleDefault" id="1Yh-dw-gGt" customClass="SwipeTableViewCell" customModule="SwipeCellKit">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1Yh-dw-gGt" id="9Rh-Nh-DZT">
@@ -109,6 +109,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -119,7 +120,6 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Todoey" id="EWU-eg-30c">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="72V-f5-SsP">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="addButtonPressed:" destination="Rbv-oW-kuI" id="a8O-0S-IJN"/>
                             </connections>
